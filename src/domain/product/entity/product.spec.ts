@@ -37,4 +37,18 @@ describe("Product unit tests", () => {
         product.changePrice(200);
         expect(product.price).toBe(200);    
     })
+
+
+    it("should throw 2 errors", () => {
+        expect(() => {
+            const product = new Product("1", "", 0);
+        }).toThrowError("Product: Name is required, Product: Price must be greater than 0");
+    })
+
+
+    it("should throw multiple errors", () => {
+        expect(() => {
+            const product = new Product("", "", -1);
+        }).toThrowError("Product: Id is required, Product: Name is required, Product: Price must be greater than 0");
+    })
 })

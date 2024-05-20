@@ -41,21 +41,21 @@ export default class Product extends AbstractEntity implements ProductInterface{
 
         if (this._id.length === 0) {
             this.notification.addError({
-                context: "product",
+                context: "Product",
                 message: "Id is required"
             })
         }
 
         if (this._name.length === 0) {
             this.notification.addError({
-                context: "product",
+                context: "Product",
                 message: "Name is required"
             })
         }
 
         if(this._price <= 0){
             this.notification.addError({
-                context: "product",
+                context: "Product",
                 message: "Price must be greater than 0"
             })
         }       

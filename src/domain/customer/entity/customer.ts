@@ -63,14 +63,14 @@ export class Customer extends AbstractEntity{
     validate() {
         if (this.id.length === 0) {
             this.notification.addError({
-                context: "customer",
+                context: "Customer",
                 message: "Id is required"
             })
         }
         
         if (this._name.length === 0) {
             this.notification.addError({
-                context: "customer",
+                context: "Customer",
                 message: "Name is required"
             })
         }
